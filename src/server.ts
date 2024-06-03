@@ -10,6 +10,8 @@ import bodyParser from "body-parser";
 import { IncomingMessage } from "http";
 import { stripeWebhookHandler } from "./webHooks";
 import nextBuild from 'next/dist/build'
+import { PayloadRequest } from "payload/types";
+import { parse } from 'url'
 
 
 
@@ -65,6 +67,23 @@ const start = async () => {
         return
     }
 
+    const cartRouter = express.Router()
+
+    cartRouter.use(payload.authenticate)
+  
+    cartRouter.get('/', (req, res) => {
+      const request = req as PayloadRequest
+  
+      if (!request.user)
+        return res.redirect('/sign-in?origin=wishlists')
+  
+      const parsedUrl = parse(req.url, true)
+      const { query } = parsedUrl
+  
+      return nextApp.render(req, res, '/wishlists', parsedUrl.query)
+    })
+
+    app.use('/wishlists',cartRouter)
 
 
 

@@ -39,7 +39,7 @@ export default function Homes() {
           <p className="mt-6 rext-lg max-w-prose text-muted-foreground ">Extraordinary experiences hosted by the world&apos;s greatest names in music, film, TV, art, sports and more
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Link href='/products' className={buttonVariants()}>Browse</Link>
+            <Link href='/product' className={buttonVariants()}>Browse</Link>
             <Button variant='ghost'>Our Qualitty Promise &rarr;</Button>
           </div>
         </p>

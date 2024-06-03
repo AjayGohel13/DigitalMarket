@@ -59,7 +59,7 @@ export function constructMetadata({
       creator: '@joshtriedcoding',
     },
     icons,
-    metadataBase: new URL('https://digitalhippo.up.railway.app'),
+    metadataBase: new URL('https://mydigitalmarket.toystack.dev'),
     ...(noIndex && {
       robots: {
         index: false,

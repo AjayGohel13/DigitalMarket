@@ -9,6 +9,7 @@ import { getServerSideUser } from '@/lib/payload-utils'
 import { cookies } from 'next/headers'
 import UserAccountNav from './UserAccountNav.'
 import Image from 'next/image'
+import MobileNav from './MobileNav'
 
 const Navbar = async () => {
     const nextCookiets = cookies()
@@ -106,6 +107,8 @@ const Navbar = async () => {
                                         </div>
                                     </div>
                                 </div>
+                                <MobileNav/>
+
                             </div>
                         </div>
                     </MaxWidthWrapper>
