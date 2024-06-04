@@ -7,7 +7,7 @@ export const useAuth = () => {
 
     const signOut = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/api/users/logout`, {
+            const res = await fetch(`${process.env.NEXT_APP_URL}/api/users/logout`, {
                 method: "POST",
                 credentials: "include",
                 headers: {
