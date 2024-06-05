@@ -10,7 +10,7 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "https://mydigitalmarket.toystack.dev",
+				hostname: "https://digital-market-git-master-ajaygohel13s-projects.vercel.app/",
 			},
 		],
 	},
